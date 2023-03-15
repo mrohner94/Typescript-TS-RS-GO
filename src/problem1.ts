@@ -19,7 +19,7 @@
 
 // this means that up 3 is actually -3 from the y axis.
 
-const getInput = (): string => {
+const getProblemOneInput = (): string => {
   return `forward 5
 down 5
 forward 8
@@ -46,11 +46,11 @@ function parseLine(line: string): [number, number] {
   return [0, 0];
 }
 
-const items = getInput()
+const items = getProblemOneInput()
   .split("\n")
   .map((x) => parseLine(x));
 
-const out = getInput()
+const out = getProblemOneInput()
   .split("\n")
   .map((x) => parseLine(x))
   .reduce(
